@@ -1,1 +1,5 @@
 This is a test text
+
+已验证VScode可以完成远程仓库的克隆
+
+检查VScode能否完成github的推送和拉取
