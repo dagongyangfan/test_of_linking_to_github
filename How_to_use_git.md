@@ -4,6 +4,20 @@
 	git config --global user.email "邮箱"
 
 
+# 在vscode中使用git进行版本管理（不使用插件）
+	# 首先，在git.path中设置路径（依旧是需要将正斜杠改为反斜杠）
+	# 其次，Ctrl+Shift+P → 输入 Preferences: Open User Settings (JSON)
+	# 在"terminal.integrated.profiles.windows"下添加
+		"Git_Bash": {
+				"path": "D:/Git/bin/bash.exe",
+				"args": [
+					"--login",
+					"-i"
+				]
+			}
+	# 之后在有需要是即可在vscode中打开git.bash进行版本控制
+
+
 # 连接本地仓库和github远程仓库
 	# 生成密钥
 	ssh-keygen -t ed25519 -C "全局身份邮箱"
