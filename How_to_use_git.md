@@ -4,7 +4,7 @@
 	git config --global user.email "邮箱"
 
 
-# 在vscode中使用git进行版本管理（不使用插件）
+# 在vscode中使用git进行版本管理（使用git.bash）
 	# 首先，在git.path中设置路径（依旧是需要将正斜杠改为反斜杠）
 	# 其次，Ctrl+Shift+P → 输入 Preferences: Open User Settings (JSON)
 	# 在"terminal.integrated.profiles.windows"下添加
@@ -16,6 +16,13 @@
 				]
 			}
 	# 之后在有需要是即可在vscode中打开git.bash进行版本控制
+
+
+# 在vscode中使用git进行版本管理（不使用git.bash）
+	# 暂存更改
+	# 提交更改
+	# 解决冲突
+	# 推送
 
 
 # 连接本地仓库和github远程仓库
