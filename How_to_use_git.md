@@ -52,13 +52,28 @@
 # 创建项目
 	mkdir xxx		# 新建目录
 	git init 		# 初始化git仓库（生成.git隐藏文件夹）
+	# 未来需要拉取仓库内容时需要手动设置追踪
+		# 若还为建立远程连接，则先建立远程连接
+		git remote add origin git@github.com:github用户名/仓库名
+		# 获取远程分支信息
+		git fetch origin
+		# 把远程 main 拉下来并允许合并不相关历史
+		git pull origin main --allow-unrelated-histories
+		# 若有冲突，则先手动解决冲突
+		# 建立本地 main 对 origin/main 的跟踪
+		git branch --set-upstream-to=origin/main main 
+	
 	touch xxx		# 新建文件
 
 
 # 提交
+	# 若远程仓库非空，则应该先同步，既将远程仓库的文件拉取后提交
+	# 且必须保证无冲突 
+
 	git add .		# .表示添加所有文件到暂存区、也可以指定文件名
 	git commit -m "描述"	# 提交到本地仓库
 
+	# 建立远程连接
 	git remote add origin git@github.com:github用户名/仓库名
 
 	git branch -M main      	# 把默认分支命名成 main，与github保持一致
@@ -70,5 +85,8 @@
 	git push               		 # 不用再带 -u
 	
 
-
+# 拉取
+	# 首次拉取必须使用clone
+	git clone git@github.com:github用户名/仓库名
+	# 克隆下来的仓库会自带“上游（upstream）”跟踪信息 
 	
