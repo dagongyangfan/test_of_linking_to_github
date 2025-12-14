@@ -89,4 +89,8 @@
 	# 首次拉取必须使用clone
 	git clone git@github.com:github用户名/仓库名
 	# 克隆下来的仓库会自带“上游（upstream）”跟踪信息 
+
+	!!!可能存在网络/防火墙拦截Github22端口，导致无法使用SSH进行克隆
+	使用HTTP方式代替
+	git clone https://github.com/github用户名/仓库名.git
 	
